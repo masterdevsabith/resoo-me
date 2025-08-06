@@ -1,12 +1,22 @@
+"use client";
+
 import Link from "next/link";
 
 export default function DashboardPage() {
+  const handlePrint = () => {
+    window.print();
+  };
+
   return (
-    <section className="resume_landing bg-stone-300 w-full flex items-center justify-center p-20">
-      <div
-        id="resume"
-        className="w-[794px] h-[1123px] bg-white p-8 shadow-md text-black"
+    <section className="resume_landing bg-stone-300 w-full flex flex-col items-center justify-center p-20">
+      <button
+        id="download"
+        onClick={handlePrint}
+        className="mb-6 px-4 py-2 bg-black text-white rounded"
       >
+        Download PDF
+      </button>
+      <div id="resume" className=" bg-white p-8 shadow-md text-black">
         <div className="name_and_basic_details mb-10">
           <h1 className="font-black text-3xl">MUHAMMED SABITH A S</h1>
           <p className="text-stone-900">

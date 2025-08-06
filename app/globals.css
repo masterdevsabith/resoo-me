@@ -24,3 +24,41 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  #resume {
+    width: 210mm !important; /* A4 Width */
+    height: auto !important;
+    min-height: 297mm; /* A4 Height */
+    padding: 20mm !important;
+    box-sizing: border-box;
+    page-break-after: avoid;
+  }
+
+  .resume_landing {
+    background: none !important;
+    padding: 0 !important;
+  }
+
+  button {
+    display: none !important; /* Hide Download Button */
+  }
+
+  html,
+  body {
+    width: 210mm;
+    height: 297mm;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+}
